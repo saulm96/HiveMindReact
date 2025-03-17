@@ -1,3 +1,5 @@
+import "./landingPage.css"
+
 export default function LandingPage() {
   return (
     <div>
