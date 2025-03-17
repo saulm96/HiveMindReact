@@ -1,0 +1,13 @@
+footer{
+    background-color: #000;
+    padding: 2rem 0;
+    text-align: center;
+
+    height: 10vh;
+}
+.footer-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
