@@ -19,28 +19,28 @@ export default function LoginForm({ onLoginSuccess, onCancel }) {
 
   return (
     <div className="login-form-wrapper">
-      <h1 className="login-title">Login</h1>
       <form onSubmit={handleSubmit}>
         <div className="email-holder">
           <input
+            className="signIn-form-input"
             type="email"
             id="email"
             name="email"
-            placeholder="johnDoe@gmail.com"
             value={formData.email}
             onChange={(e) =>
-              setFormData({ ...formData, password: e.target.value })
+              setFormData({ ...formData, email: e.target.value })
             }
-            required
           />
         </div>
 
         <div className="password-holder">
           <input
+            className="signIn-form-input"
             type="password"
             id="password"
             name="password"
             placeholder="Password"
+            suggested="current-password"
             value={formData.password}
             onChange={(e) =>
               setFormData({ ...formData, password: e.target.value })

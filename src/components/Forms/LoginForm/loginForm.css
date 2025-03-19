@@ -4,15 +4,6 @@
     align-items: center;
     height: 100%;
 }
-.login-title{
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333;
-
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
 form{
     display: flex;
     flex-direction: column;
@@ -20,4 +11,11 @@ form{
     align-items: center;
 
     gap:1rem;
+}
+
+.signIn-form-input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 8px;
 }

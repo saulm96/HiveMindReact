@@ -1,0 +1,38 @@
+.landing-page-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+
+    position: relative;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+
+    margin: 0 1rem;
+}
+
+.header-logo {
+    width: 5rem;
+}
+
+
+
+/*TITLE EFECTS*/
+.header-title-container {
+    position: absolute;
+    left: 5rem;
+    bottom: -8rem;
+}
+
+.header-title {
+    font-size: 4rem;
+}
