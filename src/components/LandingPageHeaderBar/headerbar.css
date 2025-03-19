@@ -1,12 +1,13 @@
 .landing-page-header {
-    background-color: #333;
+    background-color: rgba(1, 1, 1, 0);
     color: white;
     padding: 10px;
     align-items: center;
-    height: 7vh;
+    height: 8vh;
     width: 100%;
-
-    position: relative;
+    position: fixed;
+    z-index: 1;
+    top: 0
 }
 
 .header-wrapper {
@@ -14,25 +15,91 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     height: 100%;
-
-    margin: 0 1rem;
+    
 }
 
 .header-logo {
-    width: 5rem;
+    opacity:0;
+    width: 6rem;
+    position: absolute;
+    top: -15%;
+    left: 0;
 }
 
-
-
-/*TITLE EFECTS*/
 .header-title-container {
     position: absolute;
-    left: 5rem;
-    bottom: -8rem;
+    left: 4rem;
+    bottom: -7rem;
+}
+.header-title{
+    font-size: 4rem;
+
 }
 
-.header-title {
-    font-size: 4rem;
+.hero-wrapper{
+    width: 90%;
+    height: 55vh;
+    position: relative;
+
+    
+    object-fit: contain;
+    margin-top: 2rem;
+
+    background: rgb(19, 19, 19);
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 255, 42, 0.1);
+}
+
+.hero-content{
+    position: absolute;
+    top: 30%;
+}
+
+.-hero-subtitle{
+    left: 30%;
+    color: white;
+}
+.-hero-welcome-section{
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-welcome-card{
+    height: auto;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+    padding: 1rem;
+
+    background: rgba(146, 255, 164, 0.1);
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-welcome-card-title-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero-welcome-card-title-section :last-child{
+    text-align: right;
+    margin:1rem 1rem;
+}
+
+.hero-signInButton{
+    padding: 0.5rem;
+}
+
+.hero-advertise{
+    margin-top: 1rem;
 }
