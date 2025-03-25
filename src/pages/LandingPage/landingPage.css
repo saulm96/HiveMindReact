@@ -1,3 +1,51 @@
-main{
-    min-height: 70vh;
+main {
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* Animated cards */
+.animated-lp-cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.lp-card-container{
+    width: 20rem;
+    opacity: 0.5;
+}
+
+.--odd{
+    transform: translateX(-15%);
+}
+.--even{
+    transform: translateX(15%);
+}
+.LPCard{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top:1.5rem;
+
+    border: 1px solid rgb(214, 218, 22,);
+    border-radius: 0.5rem;
+    background-color: rgb(94, 94, 94);
+    box-shadow: 0 0 10px 1px rgba(214, 218, 22, 0.678);
+
+}
+.lp-card-title-holder{
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)) 1;
+    border-image-slice: 1;
+
+}
+
+.card-title{
+    width: 80%;
+    margin: 0.5rem 0 0 0.5rem;
 }
