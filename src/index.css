@@ -4,6 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(26, 22, 22);
+#root{
+    background-color: rgb(173, 173, 173);
 }

@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
+
+import DropDownButtonLP from "../../components/Buttons/DropDownButtonLP/DropDownButtonLP";
 import SignInButton from "./SignInButton/SignInButton";
 import navBarLogo from "../../assets/1st-logo.png";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./headerbar.css";
@@ -8,7 +11,6 @@ import "./headerbar.css";
 export default function HeaderBar() {
   const titleContainerRef = useRef(null);
   const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
   const logoRef = useRef(null);
   const headerRef = useRef(null);
   const heroWrapperRef = useRef(null);
@@ -18,7 +20,6 @@ export default function HeaderBar() {
     if (
       !titleContainerRef.current ||
       !titleRef.current ||
-      !subtitleRef.current ||
       !logoRef.current ||
       !headerRef.current ||
       !heroWrapperRef.current
@@ -51,12 +52,11 @@ export default function HeaderBar() {
 
     tl.fromTo(
       titleContainerRef.current,
-      { left: "4rem", bottom: "-7rem" },
-      { left: "5rem", bottom: "auto", top: "1rem" },
+      { left: "15%", bottom: "-60%" },
+      { left: "17%", bottom: "auto", top: "20%" },
       0
     )
       .fromTo(titleRef.current, { fontSize: "4rem" }, { fontSize: "2rem" }, 0)
-      .fromTo(subtitleRef.current, { opacity: 1 }, { opacity: 0 }, 0)
       .fromTo(logoRef.current, { opacity: 0 }, { opacity: 1 }, 0)
       .fromTo(
         headerRef.current,
@@ -90,10 +90,13 @@ export default function HeaderBar() {
         </div>
       </section>
       <div className="hero-wrapper" ref={heroWrapperRef}>
-        <div className="hero-content -hero-subtitle" ref={subtitleRef}>
-          <p className="hero-subtitle">Stay organized. Stay connected.</p>
-        </div>
         <section className="hero-content -hero-welcome-section">
+          <div className="hero-slogan">
+            <p className="hero-slogan-content">
+              Manage your teams, distribute tasks, and track their progress all
+              in one place. Efficient and seamless teamwork!
+            </p>
+          </div>
           <div className="hero-welcome-card">
             <div className="hero-welcome-card-title-section">
               <p className="welcome-card-title">
@@ -101,12 +104,13 @@ export default function HeaderBar() {
               </p>
               <p className="welcome-card-title">Try HiveMind Now!</p>
             </div>
+
             <div className="hero-signInButton">
               <SignInButton />
             </div>
             <div className="hero-advertise">
               <p className="welcome-card-advertiser">
-                We are still development the project.
+                HiveMind is still under construction.
               </p>
               <p className="welcome-card-advertiser">
                 Please be patient and report any issue.
@@ -115,6 +119,9 @@ export default function HeaderBar() {
           </div>
         </section>
       </div>
+      <DropDownButtonLP />
+
+      <div className="hero-lp-divider"></div>
     </>
   );
 }

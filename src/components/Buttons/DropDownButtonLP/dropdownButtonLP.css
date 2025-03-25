@@ -1,0 +1,9 @@
+.dropdown-lp-container{
+  width: 10%;
+  height: 5%;
+  background-color: rgb(4, 243, 63);
+
+  position:fixed;
+  bottom: 0;
+  right: 0;
+}
