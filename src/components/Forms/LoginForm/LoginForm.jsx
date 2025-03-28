@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import {login} from "../../../services/authService.js"
+
 import "./loginForm.css";
 
 export default function LoginForm({ onLoginSuccess, onCancel }) {
@@ -15,10 +18,20 @@ export default function LoginForm({ onLoginSuccess, onCancel }) {
     setIsLoading(true);
 
     //Logic to call the api here inside a try cactch block
+    try {
+      const userData = await login(formData.email, formData.password);
+      onLoginSuccess(userData);
+    } catch (error) {
+      setError(error.message || "Login Failedm Please try again.");
+      console.log(error)
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <div className="login-form-wrapper">
+      {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="email-holder">
           <input
@@ -48,7 +61,9 @@ export default function LoginForm({ onLoginSuccess, onCancel }) {
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Logging in...' : 'Login'}
+        </button>
       </form>
     </div>
   );
